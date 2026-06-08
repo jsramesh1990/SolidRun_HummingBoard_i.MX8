@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstring>
 
 #ifdef _WIN32
     #include <winsock2.h>
