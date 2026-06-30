@@ -1,4 +1,4 @@
-# Embedded Learning Platform for HummingBoard i.MX8
+# HummingBoard i.MX8
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-ARM64-blue.svg)](https://www.solid-run.com/nxp-imx8-hummingboard/)
@@ -10,18 +10,18 @@
 [![Docker](https://img.shields.io/badge/docker-supported-2496ED.svg)](https://www.docker.com/)
 [![Documentation](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://github.com/yourusername/embedded-learning-platform/docs)
 
-## 🚀 Overview
+##  Overview
 
 A comprehensive embedded Linux learning and development platform for the **SolidRun HummingBoard i.MX8**. This project provides a complete, production-ready embedded system with a Qt6/QML graphical interface, supporting multiple peripherals and communication protocols.
 
-### 🎯 Project Goals
+###  Project Goals
 
 - **Learn Embedded Linux**: Complete hands-on experience with Yocto, device trees, and kernel development
 - **Build Professional Skills**: Practice real-world embedded development patterns
 - **Create Reusable Components**: Modular design for easy extension and reuse
 - **Demonstrate Industry Standards**: Follow best practices for commercial embedded products
 
-## 📊 System Architecture
+##  System Architecture
 
 ### Overall Architecture Diagram
 
@@ -179,7 +179,7 @@ sequenceDiagram
     Database-->>Dashboard: Logged
 ```
 
-## 🔌 Peripheral Connections
+##  Peripheral Connections
 
 ### Hardware Interface Map
 
@@ -260,7 +260,7 @@ graph TD
 | **Camera** | CSI | MIPI-CSI | Video Capture | ✅ |
 | **Debug Console** | UART | UART1 | Serial Debug | ✅ |
 
-## 📱 Application Modules
+##  Application Modules
 
 ### Module Architecture
 
@@ -490,7 +490,7 @@ bitbake -c populate_sdk embedded-learning-image
 | **SDK** | `yocto/build/tmp/deploy/sdk/` | Cross-compilation SDK |
 | **Device Tree** | `device-tree/custom.dts` | Custom device tree |
 
-## 📊 Calculator Flow Diagram
+##  Calculator Flow Diagram
 
 ### Calculator Architecture
 
@@ -634,7 +634,7 @@ graph TD
     CALC --> MS & MR & MC & M_ADD
 ```
 
-## 🔄 System Flow Diagrams
+##  System Flow Diagrams
 
 ### Application Lifecycle
 
@@ -757,7 +757,7 @@ sequenceDiagram
     MQTT-->>Service: Acknowledged
 ```
 
-## 🛠️ Peripheral Connection and Data Flow
+##  Peripheral Connection and Data Flow
 
 ### GPIO Connection Flow
 
@@ -877,133 +877,7 @@ flowchart LR
     PUB & SUB --> UI
 ```
 
-## 📦 Project Structure
-
-```
-embedded-learning-platform/
-├── 📄 README.md                 # Main documentation
-├── 📄 LICENSE                   # MIT License
-├── 📄 .gitignore               # Git ignore rules
-├── 📄 .gitattributes           # Git attributes
-│
-├── 📁 scripts/                 # Build and deployment scripts
-│   ├── setup.sh                # Environment setup
-│   ├── build.sh                # Build all components
-│   ├── build-cross.sh          # Cross compilation
-│   ├── flash.sh                # Flash to SD card
-│   ├── sdk.sh                  # Generate SDK
-│   ├── verify.sh               # Verify installation
-│   ├── package.sh              # Package binaries
-│   ├── install-services.sh     # Install systemd services
-│   └── manage-services.sh      # Service management
-│
-├── 📁 yocto/                   # Yocto build system
-│   ├── sources/                # Yocto sources
-│   ├── build/                  # Build directory
-│   └── meta-company/           # Custom layer
-│       ├── conf/               # Layer configuration
-│       ├── recipes-apps/       # Application recipes
-│       ├── recipes-core/       # Core recipes
-│       ├── recipes-kernel/     # Kernel recipes
-│       └── recipes-device/     # Device recipes
-│
-├── 📁 applications/            # Application modules
-│   ├── dashboard/              # Main HMI
-│   │   ├── src/                # C++ source
-│   │   ├── resources/          # QML resources
-│   │   └── CMakeLists.txt      # Build configuration
-│   ├── calculator/             # Scientific calculator
-│   ├── data-structures/        # DS visualizer
-│   ├── algorithms/             # Algorithms visualizer
-│   ├── embedded/               # Hardware interfaces
-│   │   ├── gpio/              # GPIO control
-│   │   ├── i2c/               # I2C communication
-│   │   ├── spi/               # SPI communication
-│   │   ├── uart/              # UART communication
-│   │   ├── can/               # CAN bus
-│   │   └── camera/            # Camera interface
-│   ├── sensors/                # Sensor modules
-│   ├── communication/          # Communication protocols
-│   │   ├── mqtt/              # MQTT client
-│   │   ├── modbus/            # Modbus protocol
-│   │   └── socket/            # Socket communication
-│   ├── database/               # SQLite database
-│   └── common/                 # Common libraries
-│       ├── logger/             # Logging system
-│       ├── config/             # Configuration
-│       ├── ipc/                # IPC manager
-│       └── utils/              # Utilities
-│
-├── 📁 drivers/                 # Linux device drivers
-│   ├── gpio-driver/            # GPIO driver
-│   ├── i2c-driver/             # I2C driver
-│   ├── spi-driver/             # SPI driver
-│   ├── uart-driver/            # UART driver
-│   └── custom-driver/          # Custom driver
-│
-├── 📁 kernel/                  # Kernel configuration
-│   ├── patches/                # Kernel patches
-│   ├── defconfig/              # Default configuration
-│   └── modules/                # Kernel modules
-│
-├── 📁 device-tree/             # Device tree files
-│   ├── custom.dts              # Main device tree
-│   └── overlays/               # Device tree overlays
-│       ├── gpio-led.dts       # GPIO LED overlay
-│       ├── i2c-sensors.dts    # I2C sensors overlay
-│       └── spi-devices.dts    # SPI devices overlay
-│
-├── 📁 systemd/                 # Systemd service files
-│   ├── dashboard.service       # Dashboard service
-│   ├── calculator.service      # Calculator service
-│   ├── gpio.service           # GPIO service
-│   ├── i2c.service            # I2C service
-│   ├── spi.service            # SPI service
-│   ├── uart.service           # UART service
-│   ├── can.service            # CAN service
-│   ├── mqtt.service           # MQTT broker
-│   ├── sensors.service        # Sensor service
-│   └── logger.service         # Logger service
-│
-├── 📁 tests/                   # Testing
-│   ├── unit/                   # Unit tests
-│   │   ├── test_linkedlist.cpp
-│   │   ├── test_calculator.cpp
-│   │   └── CMakeLists.txt
-│   ├── integration/            # Integration tests
-│   │   ├── test_gpio.py
-│   │   ├── test_i2c.py
-│   │   └── test_mqtt.py
-│   └── hardware/               # Hardware tests
-│       ├── test_leds.sh
-│       ├── test_sensors.sh
-│       └── run_tests.sh
-│
-├── 📁 docs/                    # Documentation
-│   ├── index.md                # Main documentation
-│   ├── api/                    # API documentation
-│   ├── hardware/               # Hardware docs
-│   └── yocto/                  # Yocto documentation
-│
-├── 📁 ci/                      # CI/CD configuration
-│   ├── .github/workflows/      # GitHub Actions
-│   │   ├── build.yml          # Build workflow
-│   │   └── yocto.yml          # Yocto workflow
-│   ├── .gitlab-ci.yml         # GitLab CI
-│   └── Jenkinsfile            # Jenkins pipeline
-│
-├── 📁 docker/                  # Docker configuration
-│   ├── Dockerfile              # Development container
-│   ├── docker-compose.yml      # Compose configuration
-│   └── .dockerignore           # Docker ignore
-│
-└── 📁 tools/                   # Development tools
-    ├── cross-toolchain/        # Cross compilation toolchain
-    ├── debug/                  # Debug tools
-    └── profiles/               # Performance profiles
-```
-
-## 🔧 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -1064,7 +938,7 @@ gitGraph
     commit id: "Release"
 ```
 
-## 🧪 Testing
+##  Testing
 
 ### Test Coverage
 
@@ -1095,7 +969,7 @@ cd tests/hardware
 ./scripts/test-all.sh
 ```
 
-## 🚀 Deployment
+##  Deployment
 
 ### Deployment Process
 
@@ -1134,7 +1008,7 @@ sudo dd if=yocto/build/tmp/deploy/images/hummingboard/embedded-learning-image-hu
 screen /dev/ttyUSB0 115200
 ```
 
-## 📈 Performance Metrics
+##  Performance Metrics
 
 | Metric | Value | Target |
 |--------|-------|--------|
@@ -1147,7 +1021,7 @@ screen /dev/ttyUSB0 115200
 | **MQTT Latency** | <10ms | <50ms |
 | **GPIO Toggle** | 100kHz | >50kHz |
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
 
@@ -1159,11 +1033,8 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Push to branch (`git push origin feature/amazing`)
 5. Open Pull Request
 
-## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [SolidRun](https://www.solid-run.com/) for the HummingBoard platform
 - [NXP](https://www.nxp.com/) for i.MX8 processor
@@ -1171,7 +1042,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Yocto Project](https://www.yoctoproject.org/) for the build system
 - [OpenEmbedded](https://www.openembedded.org/) for the metadata
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Documentation](docs/index.md)
 - [API Reference](docs/api/)
