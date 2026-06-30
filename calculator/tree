@@ -1,9 +1,0 @@
-calculator_app/
-├── backend/
-│   ├── calculator.cpp
-│   ├── calculator.h
-│   ├── main.cpp
-│   └── CMakeLists.txt
-├── frontend/
-│   └── calculator_gui.py
-└── README.md
