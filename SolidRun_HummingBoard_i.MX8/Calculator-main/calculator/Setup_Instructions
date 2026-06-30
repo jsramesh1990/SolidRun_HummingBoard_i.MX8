@@ -1,0 +1,121 @@
+Setup Instructions
+Create the project structure:
+
+mkdir calculator_app
+cd calculator_app
+mkdir backend frontend
+Backend (C++):
+
+Save the C++ files in the backend folder:
+
+calculator.h
+
+calculator.cpp
+
+main.cpp
+
+CMakeLists.txt
+
+Frontend (Python):
+
+Save the Python file in the frontend folder:
+
+calculator_gui.py
+
+3.2 Building and Running
+Step 1: Build the C++ Backend
+
+On Linux/Mac:
+
+
+cd backend
+mkdir build
+cd build
+cmake ..
+make
+./bin/calculator_backend
+On Windows (using MinGW or Visual Studio):
+
+
+cd backend
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+make
+./bin/calculator_backend.exe
+Step 2: Run the Python GUI
+
+In a separate terminal:
+
+
+cd frontend
+python calculator_gui.py
+3.3 Communication Protocol
+The Python GUI and C++ backend communicate using a simple text-based protocol over TCP sockets:
+
+Command Format:
+
+
+COMMAND [PARAMETERS]
+Example Commands:
+
+ADD 5 3 - Add 5 and 3
+
+SIN 30 - Calculate sine of 30 degrees
+
+EVAL 2+3*4 - Evaluate expression
+
+MADD 10 - Add 10 to memory
+
+HISTORY - Get calculation history
+
+Response Format:
+
+
+STATUS|EXPRESSION|RESULT|ERROR_MESSAGE
+Example Responses:
+
+SUCCESS|5 + 3|8| - Success with result
+
+ERROR|||Division by zero - Error occurred
+
+3.4 Features of This Architecture
+Separation of Concerns:
+
+Python handles GUI and user interaction
+
+C++ handles all calculations and logic
+
+Each component can be developed independently
+
+Cross-Platform:
+
+Works on Windows, Linux, and macOS
+
+Uses standard sockets for communication
+
+Scalability:
+
+Multiple GUI clients can connect to the backend
+
+Backend can be extended with more features
+
+Easy to add new operations
+
+Performance:
+
+C++ backend provides fast calculations
+
+Python GUI provides responsive interface
+
+Asynchronous communication
+
+Extensibility:
+
+Add new mathematical functions in C++
+
+Customize GUI appearance in Python
+
+Add database support for history
+
+Implement graphing capabilities
