@@ -12,7 +12,7 @@
 
 ##  Overview
 
-A comprehensive embedded Linux learning and development platform for the **SolidRun HummingBoard i.MX8**. This project provides a complete, production-ready embedded system with a Qt6/QML graphical interface, supporting multiple peripherals and communication protocols.
+A comprehensive embedded Linux development platform for the **SolidRun HummingBoard i.MX8**. This project provides a complete, production-ready embedded system with a Qt6/QML graphical interface, supporting multiple peripherals and communication protocols.
 
 ###  Project Goals
 
