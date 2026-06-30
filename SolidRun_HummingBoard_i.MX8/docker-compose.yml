@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/workspace
+      - /dev:/dev
+    privileged: true
+    network_mode: host
+    tty: true
+    stdin_open: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    devices:
+      - /dev/i2c-1:/dev/i2c-1
+      - /dev/spidev0.0:/dev/spidev0.0
+      - /dev/ttyS0:/dev/ttyS0
+      - /dev/can0:/dev/can0

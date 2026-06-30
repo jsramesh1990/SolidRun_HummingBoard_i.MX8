@@ -1,0 +1,7 @@
+[Unit]
+Description=Embedded Learning Platform Services
+Requires=embedded-learning.target
+After=embedded-learning.target
+
+[Install]
+WantedBy=embedded-learning.target

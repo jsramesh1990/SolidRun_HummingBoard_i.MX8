@@ -1,0 +1,69 @@
+/dts-v1/;
+
+/ {
+    compatible = "solidrun,hummingboard", "fsl,imx8mq";
+    
+    fragment@0 {
+        target = <&gpio1>;
+        __overlay__ {
+            pinctrl_gpio1: gpio1_pins {
+                fsl,pins = <
+                    MX8MQ_IOMUXC_GPIO1_IO00_GPIO1_IO0  0x16
+                    MX8MQ_IOMUXC_GPIO1_IO01_GPIO1_IO1  0x16
+                    MX8MQ_IOMUXC_GPIO1_IO02_GPIO1_IO2  0x16
+                >;
+            };
+        };
+    };
+    
+    fragment@1 {
+        target = <&i2c1>;
+        __overlay__ {
+            status = "okay";
+            clock-frequency = <100000>;
+            
+            temperature_sensor: tmp102@48 {
+                compatible = "ti,tmp102";
+                reg = <0x48>;
+                status = "okay";
+            };
+            
+            humidity_sensor: hdc1080@40 {
+                compatible = "ti,hdc1080";
+                reg = <0x40>;
+                status = "okay";
+            };
+        };
+    };
+    
+    fragment@2 {
+        target = <&spi1>;
+        __overlay__ {
+            status = "okay";
+            cs-gpios = <&gpio1 0 0>;
+            
+            accelerometer: adxl345@0 {
+                compatible = "adi,adxl345";
+                reg = <0>;
+                spi-max-frequency = <1000000>;
+                status = "okay";
+            };
+        };
+    };
+    
+    fragment@3 {
+        target = <&uart1>;
+        __overlay__ {
+            status = "okay";
+            pinctrl-0 = <&pinctrl_uart1>;
+        };
+    };
+    
+    fragment@4 {
+        target = <&flexcan1>;
+        __overlay__ {
+            status = "okay";
+            pinctrl-0 = <&pinctrl_flexcan1>;
+        };
+    };
+};

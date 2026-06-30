@@ -1,0 +1,19 @@
+[Unit]
+Description=Camera Service for Embedded Learning Platform
+Documentation=https://github.com/yourusername/embedded-learning-platform
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/camera-server
+Restart=always
+RestartSec=10
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=camera
+
+[Install]
+WantedBy=multi-user.target

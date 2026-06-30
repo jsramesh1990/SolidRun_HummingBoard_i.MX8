@@ -1,0 +1,37 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    fragment@0 {
+        target = <&gpio1>;
+        __overlay__ {
+            led {
+                gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
+                default-state = "off";
+            };
+        };
+    };
+    
+    fragment@1 {
+        target-path = "/";
+        __overlay__ {
+            leds {
+                compatible = "gpio-leds";
+                
+                led0 {
+                    label = "user-led0";
+                    gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
+                    linux,default-trigger = "none";
+                    default-state = "off";
+                };
+                
+                led1 {
+                    label = "user-led1";
+                    gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+                    linux,default-trigger = "none";
+                    default-state = "off";
+                };
+            };
+        };
+    };
+};

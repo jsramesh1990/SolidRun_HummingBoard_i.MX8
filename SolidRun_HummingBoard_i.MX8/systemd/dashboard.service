@@ -1,0 +1,15 @@
+[Unit]
+Description=Embedded Learning Platform Dashboard
+After=network.target multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dashboard
+Restart=always
+RestartSec=10
+User=root
+Environment=DISPLAY=:0
+Environment=QT_QPA_PLATFORM=linuxfb
+
+[Install]
+WantedBy=multi-user.target

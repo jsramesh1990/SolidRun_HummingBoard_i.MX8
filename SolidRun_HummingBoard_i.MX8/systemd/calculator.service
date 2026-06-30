@@ -1,0 +1,22 @@
+[Unit]
+Description=Scientific Calculator
+Documentation=https://github.com/yourusername/embedded-learning-platform
+After=dashboard.service
+Wants=dashboard.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/calculator
+Restart=on-failure
+RestartSec=10
+User=root
+Group=root
+Environment=DISPLAY=:0
+Environment=QT_QPA_PLATFORM=linuxfb
+Environment=QT_QUICK_BACKEND=software
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=calculator
+
+[Install]
+WantedBy=multi-user.target

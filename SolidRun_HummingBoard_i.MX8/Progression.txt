@@ -1,0 +1,36 @@
+Phase 1
+C++
+OOP
+STL
+Data Structures
+Algorithms
+Phase 2
+Qt6/QML
+CMake
+D-Bus
+Multithreading
+Phase 3
+Yocto
+BitBake
+Custom Layers
+Image Creation
+SDK Generation
+Phase 4
+Linux Device Drivers
+GPIO
+I2C
+SPI
+UART
+CAN
+Phase 5
+MQTT
+SQLite
+REST API
+WebSocket
+Logging
+Phase 6
+Device Tree
+Kernel Configuration
+U-Boot
+Secure Boot
+OTA Updates

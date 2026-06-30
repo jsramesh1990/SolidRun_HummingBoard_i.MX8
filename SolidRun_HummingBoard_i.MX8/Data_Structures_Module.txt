@@ -1,0 +1,47 @@
+Data Structures
+
+Linked List
+
+Stack
+
+Queue
+
+Binary Tree
+
+AVL Tree
+
+Graph
+
+Hash Table
+
+------------------------------------
+
+Linked List
+
+Create
+
+Display
+
+Insert Head
+
+Insert Tail
+
+Insert Position
+
+Insert Before
+
+Delete Head
+
+Delete Tail
+
+Delete Position
+
+Delete Value
+
+Reverse
+
+Search
+
+Length
+
+------------------------------------

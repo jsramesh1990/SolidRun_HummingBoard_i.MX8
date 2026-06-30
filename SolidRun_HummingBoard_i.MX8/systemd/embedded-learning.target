@@ -1,0 +1,7 @@
+[Unit]
+Description=Embedded Learning Platform Target
+Requires=network.target
+After=network.target
+
+[Install]
+WantedBy=multi-user.target

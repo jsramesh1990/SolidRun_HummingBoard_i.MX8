@@ -1,0 +1,19 @@
+[Unit]
+Description=SPI Communication Service
+Documentation=https://github.com/yourusername/embedded-learning-platform
+After=systemd-modules-load.service
+Wants=systemd-modules-load.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/spi-server
+Restart=always
+RestartSec=5
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=spi
+
+[Install]
+WantedBy=multi-user.target

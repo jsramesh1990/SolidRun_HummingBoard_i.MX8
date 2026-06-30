@@ -1,0 +1,113 @@
+  SolidRun HummingBoard i.MX8/
+
+├── README.md
+├── LICENSE
+├── docs/
+│
+├── scripts/
+│   ├── setup.sh
+│   ├── build.sh
+│   ├── flash.sh
+│   └── sdk.sh
+│
+├── yocto/
+│   ├── sources/
+│   ├── build/
+│   └── meta-company/
+│
+├── applications/
+│
+│   ├── dashboard/
+│   │
+│   ├── calculator/
+│   │
+│   ├── data-structures/
+│   │   ├── linked-list/
+│   │   ├── doubly-linked-list/
+│   │   ├── circular-linked-list/
+│   │   ├── stack/
+│   │   ├── queue/
+│   │   ├── tree/
+│   │   ├── bst/
+│   │   ├── avl/
+│   │   ├── graph/
+│   │   └── hash-table/
+│   │
+│   ├── algorithms/
+│   │   ├── sorting/
+│   │   ├── searching/
+│   │   ├── recursion/
+│   │   ├── dynamic-programming/
+│   │   └── graph-algorithms/
+│   │
+│   ├── embedded/
+│   │   ├── gpio/
+│   │   ├── i2c/
+│   │   ├── spi/
+│   │   ├── uart/
+│   │   ├── pwm/
+│   │   ├── adc/
+│   │   ├── can/
+│   │   ├── ethernet/
+│   │   ├── usb/
+│   │   └── camera/
+│   │
+│   ├── sensors/
+│   │   ├── temperature/
+│   │   ├── humidity/
+│   │   ├── pressure/
+│   │   ├── imu/
+│   │   ├── gps/
+│   │   └── current/
+│   │
+│   ├── communication/
+│   │   ├── mqtt/
+│   │   ├── modbus/
+│   │   ├── socket/
+│   │   ├── websocket/
+│   │   └── rest-api/
+│   │
+│   ├── database/
+│   │   ├── sqlite/
+│   │   └── logger/
+│   │
+│   └── common/
+│       ├── utils/
+│       ├── logger/
+│       ├── config/
+│       └── ipc/
+│
+├── drivers/
+│
+│   ├── gpio-driver/
+│   ├── i2c-driver/
+│   ├── spi-driver/
+│   ├── uart-driver/
+│   └── custom-driver/
+│
+├── kernel/
+│
+│   ├── patches/
+│   ├── defconfig/
+│   └── modules/
+│
+├── device-tree/
+│
+│   ├── custom.dts
+│   └── overlays/
+│
+├── systemd/
+│
+│   ├── dashboard.service
+│   ├── calculator.service
+│   ├── sensor.service
+│   ├── mqtt.service
+│   └── logger.service
+│
+├── tests/
+│
+│   ├── unit/
+│   ├── integration/
+│   └── hardware/
+│
+└── ci/

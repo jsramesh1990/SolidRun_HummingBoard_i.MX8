@@ -1,0 +1,19 @@
+[Unit]
+Description=Sensor Monitoring Service
+Documentation=https://github.com/yourusername/embedded-learning-platform
+After=network.target
+Wants=network.target mqtt.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/sensor-server
+Restart=always
+RestartSec=10
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sensors
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,21 @@
+Embedded Interfaces
+
+GPIO
+
+I2C
+
+SPI
+
+UART
+
+PWM
+
+ADC
+
+CAN
+
+Ethernet
+
+USB
+
+Camera

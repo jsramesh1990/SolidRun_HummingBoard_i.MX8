@@ -1,0 +1,27 @@
+Each module is packaged separately.
+
+meta-company/
+
+recipes-apps/
+
+dashboard/
+
+calculator/
+
+linkedlist/
+
+gpio/
+
+mqtt/
+
+sensor/
+
+camera/
+
+logger/
+
+database/
+
+system-monitor/
+
+Each directory contains its own .bb recipe so it can be built and updated independently.

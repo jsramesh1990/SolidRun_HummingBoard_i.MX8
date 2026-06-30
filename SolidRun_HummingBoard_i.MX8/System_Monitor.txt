@@ -1,0 +1,15 @@
+CPU Usage
+
+RAM
+
+Storage
+
+Temperature
+
+Network
+
+Processes
+
+Kernel Version
+
+IP Address

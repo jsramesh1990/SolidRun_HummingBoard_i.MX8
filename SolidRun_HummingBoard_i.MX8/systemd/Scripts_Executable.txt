@@ -1,0 +1,30 @@
+chmod +x scripts/install-services.sh
+chmod +x scripts/manage-services.sh
+
+Service Management Commands
+# Install all services
+./scripts/install-services.sh
+
+# Start a specific service
+sudo systemctl start dashboard.service
+
+# Stop a specific service
+sudo systemctl stop dashboard.service
+
+# Check service status
+sudo systemctl status dashboard.service
+
+# View service logs
+sudo journalctl -u dashboard.service -f
+
+# Start all services
+./scripts/manage-services.sh start all
+
+# Check all services status
+./scripts/manage-services.sh status all
+
+# Restart all services
+./scripts/manage-services.sh restart all
+
+# Enable all services (auto-start at boot)
+./scripts/manage-services.sh enable all
